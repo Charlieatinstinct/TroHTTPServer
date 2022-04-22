@@ -10,12 +10,12 @@ let package = Package(
 	],
 	dependencies: [
 		.package(url: "https://github.com/PerfectlySoft/Perfect-Net.git", from: "3.1.2"),
-		.package(url: "https://github.com/PerfectlySoft/Perfect-HTTP.git", from: "3.0.12"),
+		.package(url: "https://github.com/Charlieatinstinct/Ch-Perfect-HTTP.git", from: "3.3.1"),
 		.package(url: "https://github.com/PerfectlySoft/Perfect-CZlib-src.git", from: "0.0.0")
 	],
 	targets: [
 		.target(name: "PerfectCHTTPParser", dependencies: []),
-		.target(name: "PerfectHTTPServer", dependencies: ["PerfectCHTTPParser", "PerfectNet", "PerfectHTTP", "PerfectCZlib"]),
+		.target(name: "PerfectHTTPServer", dependencies: ["PerfectCHTTPParser", "PerfectNet", "ChPerfectHTTP", "PerfectCZlib"]),
 		.testTarget(name: "PerfectHTTPServerTests", dependencies: ["PerfectHTTPServer"])
 	]
 )
