@@ -4,9 +4,9 @@
 import PackageDescription
 
 let package = Package(
-	name: "PerfectHTTPServer",
+	name: "TroHTTPServer",
 	products: [
-		.library(name: "PerfectHTTPServer", targets: ["PerfectHTTPServer"])
+		.library(name: "TroHTTPServer", targets: ["TroHTTPServer"])
 	],
 	dependencies: [
 		.package(url: "https://github.com/PerfectlySoft/Perfect-Net.git", from: "3.1.2"),
@@ -14,8 +14,8 @@ let package = Package(
 		.package(url: "https://github.com/PerfectlySoft/Perfect-CZlib-src.git", from: "0.0.0")
 	],
 	targets: [
-		.target(name: "PerfectCHTTPParser", dependencies: []),
-		.target(name: "PerfectHTTPServer", dependencies: ["PerfectCHTTPParser", "PerfectNet", "ChPerfectHTTP", "PerfectCZlib"]),
-		.testTarget(name: "PerfectHTTPServerTests", dependencies: ["PerfectHTTPServer"])
+		.target(name: "PerfectTTPParser", dependencies: []),
+		.target(name: "TroHTTPServer", dependencies: ["PerfectTTPParser", "PerfectNet", "Ch-Perfect-HTTP", "PerfectCZlib"]),
+		.testTarget(name: "PerfectHTTPServerTests", dependencies: ["TroHTTPServer"])
 	]
 )
